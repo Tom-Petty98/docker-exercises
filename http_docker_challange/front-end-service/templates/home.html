@@ -1,0 +1,10 @@
+{% extends 'layout.html' %}
+{% block body_content %}
+<body> 
+    <h2>Random animal generator</h2>
+    <br>
+    <form action="{{url_for('request')}}" method="GET">
+        <button type="submit">Generate animal</button>
+    </form>
+</body>
+{% endblock %}

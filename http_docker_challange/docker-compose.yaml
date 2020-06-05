@@ -1,0 +1,18 @@
+version: '3.7'
+services:
+  front-end-service:
+    image: front-end-service
+    build: ./front-end-service
+    ports:
+    - target: 5000
+      published: 5000
+      protocol: tcp
+    depends_on: 
+    - api-service
+  api-service:
+    image: api-service
+    build: ./api-service
+    ports:
+    - target: 5001
+      published: 5001
+      protocol: tcp
